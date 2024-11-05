@@ -13,3 +13,6 @@ ENCODER_MAP_ENABLE = yes
 
 # https://docs.qmk.fm/features/mouse_keys
 MOUSEKEY_ENABLE = yes
+
+# https://docs.qmk.fm/features/tap_dance
+TAP_DANCE_ENABLE = yes
