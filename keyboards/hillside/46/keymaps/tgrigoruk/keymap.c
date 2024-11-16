@@ -16,24 +16,28 @@ enum layers {
 // Tap Dance declarations
 enum {
     TD_LSFT_CAPSWORD = 0,
-    TD_LGUI_NAVLAYER,
+    TD_NUM_NAV_LAYERS,
 };
 
 // Tap Dance definitions
 tap_dance_action_t tap_dance_actions[] = {
     // Tap once for Shift, twice for Caps Word Toggle
     [TD_LSFT_CAPSWORD] = ACTION_TAP_DANCE_DOUBLE(KC_LSFT, CW_TOGG),
-    [TD_LGUI_NAVLAYER] = ACTION_TAP_DANCE_DOUBLE(KC_LGUI, TG(_NAV)),
+    // Tap once for GUI, twice for NAV layer
+    [TD_NUM_NAV_LAYERS] = ACTION_TAP_DANCE_DOUBLE(TG(_NUM_SYM_FUN), TG(_NAV)),
 };
 
 // Tap Dance Aliases
 #define TD_SFT_CW TD(TD_LSFT_CAPSWORD)
-#define TD_GUI_NAV TD(TD_LGUI_NAVLAYER)
+#define TD_NUM_NAV TD(TD_NUM_NAV_LAYERS)
 
 //----------------------------------------------------------------------
 
 #define xxxxxxxxxx KC_NO
 #define __________ KC_TRNS
+
+#define ALT_L RALT(KC_LEFT)
+#define ALT_R RALT(KC_RGHT)
 
 // https://docs.qmk.fm/feature_layers#switching-and-toggling-layers
 #define LY_NUM MO(_NUM_SYM_FUN)
@@ -77,9 +81,10 @@ tap_dance_action_t tap_dance_actions[] = {
 #define HOME_SCLN RCTL_T(KC_SCLN)
 
 // Layer Toggles
-#define L1(key) LT(1,key)
-#define L2(key) LT(2,key)
-#define L3(key) LT(3,key)
+#define L1(key) LT(_NUM_SYM_FUN,key)
+#define L2(key) LT(_NAV,key)
+#define L3(key) LT(_MOUSE_MEDIA,key)
+
 
 //----------------------------------------------------------------------
 
@@ -87,31 +92,56 @@ tap_dance_action_t tap_dance_actions[] = {
 // clang-format off
 // https://docs.qmk.fm/keycodes
 // https://docs.qmk.fm/keycodes_us_ansi_shifted
+// https://docs.qmk.fm/features/mouse_keys
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+
     [_QWERTY] = LAYOUT(
+
+//     |-----------|-----------|-----------|-----------|-----------|-----------|                           |-----------|-----------|-----------|-----------|-----------|-----------|
         KC_ESC,     KC_Q,       KC_W,       KC_E,       KC_R,       KC_T,                                   KC_Y,       KC_U,       KC_I,       KC_O,       KC_P,       KC_BSPC,
-        KC_TAB,     KC_A,       KC_S,       KC_D,       KC_F,       KC_G,                                   KC_H,       KC_J,       KC_K,       KC_L,       KC_SCLN,    KC_QUOT,
-        TD_SFT_CW,  KC_Z,       KC_X,       KC_C,       KC_V,       KC_B,       xxxxxxxxxx,     xxxxxxxxxx, KC_N,       KC_M,       KC_COMM,    KC_DOT,     KC_SLSH,    KC_BSLS,
-                                            KC_LCTL,    KC_LALT,    KC_LGUI,    L1(KC_ENT),     LY_NUM,     L2(KC_SPC), LY_MM,      LY_MM
+//     |-----------|-----------|-----------|-----------|-----------|-----------|                           |-----------|-----------|-----------|-----------|-----------|-----------|
+        KC_TAB,     KC_A,       KC_S,       KC_D,       KC_F,       KC_G,                                   KC_H,       KC_J,       KC_K,       KC_L,       KC_SCLN,    KC_ENT,
+//     |-----------|-----------|-----------|-----------|-----------|-----------|                           |-----------|-----------|-----------|-----------|-----------|-----------|
+        TD_SFT_CW,  KC_Z,       KC_X,       KC_C,       KC_V,       KC_B,       xxxxxxxxxx,     xxxxxxxxxx, KC_N,       KC_M,       KC_COMM,    KC_DOT,     KC_SLSH,    KC_QUOT,
+//     |-----------|-----------|-----------|-----------|-----------|-----------|-----------|   |-----------|-----------|-----------|-----------|-----------|-----------|-----------|
+                                            KC_LCTL,    KC_LALT,    KC_LGUI,    TD_NUM_NAV,     LY_NAV,     KC_SPC,     LY_MM,      LY_NUM
+//                                         |-----------|-----------|-----------|-----------|   |-----------|-----------|-----------|-----------|
     ),
     [_NUM_SYM_FUN] = LAYOUT(
-        KC_GRV,     KC_F1,      KC_F2,      KC_F3,    KC_F4,     KC_F5,                                     KC_PEQL,    KC_7,       KC_8,       KC_9,       KC_PPLS,    KC_PMNS,
-        __________, KC_F6,      KC_F7,      KC_F8,    KC_F9,     KC_F10,                                    KC_PDOT,    KC_4,       KC_5,       KC_6,       KC_PAST,    KC_PSLS,
-        __________, KC_F11,     KC_F12,     KC_F13,   KC_F14,    KC_F15,        xxxxxxxxxx,     xxxxxxxxxx, KC_0,       KC_1,       KC_2,       KC_3,       KC_PERC,    KC_UNDS,
-                                            __________, __________, __________, KC_ENT,         xxxxxxxxxx, KC_SPC,     __________, __________
+
+//     |-----------|-----------|-----------|-----------|-----------|-----------|                           |-----------|-----------|-----------|-----------|-----------|-----------|
+        KC_GRV,     KC_F1,      KC_F2,      KC_F3,      KC_F4,      KC_F5,                                  KC_PEQL,    KC_7,       KC_8,       KC_9,       KC_PPLS,    KC_PMNS,
+//     |-----------|-----------|-----------|-----------|-----------|-----------|                           |-----------|-----------|-----------|-----------|-----------|-----------|
+        __________, KC_F6,      KC_F7,      KC_F8,      KC_F9,      KC_F10,                                 KC_PDOT,    KC_4,       KC_5,       KC_6,       KC_PAST,    KC_UNDS,
+//     |-----------|-----------|-----------|-----------|-----------|-----------|                           |-----------|-----------|-----------|-----------|-----------|-----------|
+        __________, LAG(KC_1),  LAG(KC_2),  LAG(KC_3),  LAG(KC_4), LAG(KC_5),   xxxxxxxxxx,     xxxxxxxxxx, KC_0,       KC_1,       KC_2,       KC_3,       KC_BSLS,    KC_PIPE,
+//     |-----------|-----------|-----------|-----------|-----------|-----------|-----------|   |-----------|-----------|-----------|-----------|-----------|-----------|-----------|
+                                            __________, __________, __________, xxxxxxxxxx,     xxxxxxxxxx, KC_SPC,     xxxxxxxxxx, xxxxxxxxxx
+//                                         |-----------|-----------|-----------|-----------|   |-----------|-----------|-----------|-----------|
     ),
     [_NAV] = LAYOUT(
-        __________, KC_PGDN,    KC_HOME,    KC_UP,      KC_END,     KC_WH_U,                                xxxxxxxxxx, KC_HOME,    KC_PGUP,    KC_PGDN,    KC_END,     xxxxxxxxxx,
-        __________, KC_LALT,    KC_LEFT,    KC_DOWN,    KC_RGHT,    KC_WH_D,                                xxxxxxxxxx, KC_LEFT,    KC_UP,      KC_DOWN,    KC_RGHT,    xxxxxxxxxx,
-        __________, UNDO,       CUT,        COPY,       PASTE,      xxxxxxxxxx, xxxxxxxxxx,     xxxxxxxxxx, xxxxxxxxxx, KC_WH_L, KC_WH_U, KC_WH_D, KC_WH_R, xxxxxxxxxx,
-                                            __________, __________, __________, KC_ENT,         xxxxxxxxxx, KC_SPC,     __________, __________
+
+//     |-----------|-----------|-----------|-----------|-----------|-----------|                           |-----------|-----------|-----------|-----------|-----------|-----------|
+        __________, KC_PGDN,    KC_HOME,    KC_UP,      KC_END,     KC_WH_U,                                KC_PGUP,    KC_HOME,    KC_UP,      KC_PGDN,    KC_END,     KC_DEL,
+//     |-----------|-----------|-----------|-----------|-----------|-----------|                           |-----------|-----------|-----------|-----------|-----------|-----------|
+        __________, KC_LALT,    KC_LEFT,    KC_DOWN,    KC_RGHT,    KC_WH_D,                                KC_PGDN,    KC_LEFT,    KC_DOWN,    KC_RGHT,    KC_RSFT,    KC_INS,
+//     |-----------|-----------|-----------|-----------|-----------|-----------|                           |-----------|-----------|-----------|-----------|-----------|-----------|
+        __________, UNDO,       CUT,        COPY,       PASTE,      xxxxxxxxxx, xxxxxxxxxx,     xxxxxxxxxx, xxxxxxxxxx, ALT_L,      xxxxxxxxxx, ALT_R,      xxxxxxxxxx, xxxxxxxxxx,
+//     |-----------|-----------|-----------|-----------|-----------|-----------|-----------|   |-----------|-----------|-----------|-----------|-----------|-----------|-----------|
+                                            __________, __________, __________, xxxxxxxxxx,     xxxxxxxxxx, xxxxxxxxxx, xxxxxxxxxx, xxxxxxxxxx
+//                                         |-----------|-----------|-----------|-----------|   |-----------|-----------|-----------|-----------|
         ),
-    // https://docs.qmk.fm/features/mouse_keys
     [_MOUSE_MEDIA] = LAYOUT(
-        BR_UP,      xxxxxxxxxx, xxxxxxxxxx, MISSION,    xxxxxxxxxx, VOL_UP,                                 KC_WH_U,    KC_WH_L,    KC_MS_U,    KC_WH_R,    xxxxxxxxxx, xxxxxxxxxx,
-        BR_DOWN,    REDO,       PREV,       PLY_PAU,    NEXT,       VOL_DOWN,                               KC_WH_D,    KC_MS_L,    KC_MS_D,    KC_MS_R,    xxxxxxxxxx, xxxxxxxxxx,
-        __________, UNDO,       CUT,        COPY,       PASTE,      MUTE,       xxxxxxxxxx,     xxxxxxxxxx, xxxxxxxxxx, KC_BTN1,    KC_BTN2,    KC_BTN3,    KC_BTN4,    KC_BTN5,
-                                            __________, __________, __________, KC_ENT,         xxxxxxxxxx, KC_SPC,     __________, __________
+
+//     |-----------|-----------|-----------|-----------|-----------|-----------|                           |-----------|-----------|-----------|-----------|-----------|-----------|
+        BR_UP,      xxxxxxxxxx, xxxxxxxxxx, MISSION,    xxxxxxxxxx, VOL_UP,                                 KC_WH_U,    KC_WH_L,    KC_MS_U,    KC_WH_R,    xxxxxxxxxx, PLY_PAU,
+//     |-----------|-----------|-----------|-----------|-----------|-----------|                           |-----------|-----------|-----------|-----------|-----------|-----------|
+        BR_DOWN,    REDO,       PREV,       PLY_PAU,    NEXT,       VOL_DOWN,                               KC_WH_D,    KC_MS_L,    KC_MS_D,    KC_MS_R,    KC_BTN1,    KC_BTN2,
+//     |-----------|-----------|-----------|-----------|-----------|-----------|                           |-----------|-----------|-----------|-----------|-----------|-----------|
+        __________, UNDO,       CUT,        COPY,       PASTE,      MUTE,       xxxxxxxxxx,     xxxxxxxxxx, xxxxxxxxxx, xxxxxxxxxx, xxxxxxxxxx, xxxxxxxxxx, KC_BTN3,    KC_BTN4,
+//     |-----------|-----------|-----------|-----------|-----------|-----------|-----------|   |-----------|-----------|-----------|-----------|-----------|-----------|-----------|
+                                            __________, __________, __________, xxxxxxxxxx,     xxxxxxxxxx, xxxxxxxxxx, xxxxxxxxxx, xxxxxxxxxx
+//                                         |-----------|-----------|-----------|-----------|   |-----------|-----------|-----------|-----------|
         )
 };
 
@@ -119,6 +149,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 const uint16_t PROGMEM escq_combo[] = {KC_ESC, KC_Q, COMBO_END};
 const uint16_t PROGMEM hj_combo[] = {KC_H, KC_J, COMBO_END};
+const uint16_t PROGMEM pbspc_combo[] = {KC_P, KC_BSPC, COMBO_END};
+const uint16_t PROGMEM sclnent_combo[] = {KC_SCLN, KC_ENT, COMBO_END};
+
+
 
 const uint16_t PROGMEM er_combo[] = {KC_E, KC_R, COMBO_END};
 const uint16_t PROGMEM we_combo[] = {KC_W, KC_E, COMBO_END};
@@ -131,6 +165,8 @@ const uint16_t PROGMEM uio_combo[] = {KC_U, KC_I, KC_O, COMBO_END};
 combo_t key_combos[] = {
     COMBO(escq_combo, KC_GRV),
     COMBO(hj_combo, KC_PEQL),
+    COMBO(pbspc_combo, KC_DEL),
+    COMBO(sclnent_combo, KC_INS),
 
     COMBO(er_combo, KC_LPRN),
     COMBO(we_combo, KC_LBRC),
