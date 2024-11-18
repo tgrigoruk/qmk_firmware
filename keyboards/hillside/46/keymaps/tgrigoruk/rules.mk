@@ -15,4 +15,4 @@ ENCODER_MAP_ENABLE = yes
 MOUSEKEY_ENABLE = yes
 
 # https://docs.qmk.fm/features/tap_dance
-TAP_DANCE_ENABLE = yes
+# TAP_DANCE_ENABLE = yes

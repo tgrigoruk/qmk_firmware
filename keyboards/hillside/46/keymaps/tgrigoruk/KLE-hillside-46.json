@@ -9,93 +9,8 @@
     "switchMount": "",
     "switchBrand": "",
     "switchType": "",
-    "pcb": true
-  },
-  {
-    "x": 7.2,
-    "y": 0,
-    "x2": 0,
-    "y2": 0,
-    "width": 2,
-    "height": 1,
-    "width2": 2,
-    "height2": 1,
-    "rotation_angle": 0,
-    "rotation_x": 0,
-    "rotation_y": 0,
-    "labels": [
-      "[  WE",
-      null,
-      "IO ]",
-      "( ER",
-      null,
-      "UI )",
-      "{ WER",
-      null,
-      "UIO }"
-    ],
-    "textColor": [
-      null,
-      null,
-      "",
-      null,
-      null,
-      null,
-      null,
-      null,
-      "",
-      null,
-      ""
-    ],
-    "textSize": [],
-    "default": {
-      "textColor": "#000000",
-      "textSize": 3
-    },
-    "color": "#cccccc",
-    "profile": "",
-    "nub": false,
-    "ghost": false,
-    "stepped": false,
-    "decal": true,
-    "coloredBorder": true,
-    "sm": "",
-    "sb": "",
-    "st": "",
-    "rect": {
-      "x": 388.8,
-      "y": 0,
-      "w": 108,
-      "h": 54,
-      "x2": 496.8,
-      "y2": 54
-    },
-    "rect2": {
-      "x": 388.8,
-      "y": 0,
-      "w": 108,
-      "h": 54,
-      "x2": 496.8,
-      "y2": 54
-    },
-    "bbox": {
-      "x": 388.8,
-      "y": 0,
-      "x2": 496.8,
-      "y2": 54,
-      "w": 108,
-      "h": 54
-    },
-    "mat": {
-      "a": 1,
-      "b": 0,
-      "c": 0,
-      "d": 1,
-      "e": 0,
-      "f": 0
-    },
-    "crosshairs": "none",
-    "html": {}
+    "pcb": true,
+    "css": "* {\n    font-weight: bold;\n    font-family: \"Arial Rounded MT Bold\";\n}"
   },
   {
     "x": 3.5,
@@ -123,7 +38,7 @@
     "textColor": [
       null,
       null,
-      "",
+      "#009682",
       null,
       null,
       null,
@@ -223,7 +138,7 @@
     "textColor": [
       null,
       null,
-      "",
+      "#009682",
       null,
       null,
       null,
@@ -312,7 +227,7 @@
     "labels": [
       "T",
       null,
-      "⇡",
+      "&theta;⇡",
       null,
       null,
       null,
@@ -320,12 +235,12 @@
       null,
       "F5",
       null,
-      "<i class='fa fa-volume-up'></i>"
+      "vol +"
     ],
     "textColor": [
       null,
       null,
-      "",
+      "#009682",
       null,
       null,
       null,
@@ -400,27 +315,27 @@
     "html": {}
   },
   {
-    "x": 7.2,
-    "y": 0.95,
+    "x": 6.9,
+    "y": 0.7,
     "x2": 0,
     "y2": 0,
-    "width": 2,
+    "width": 2.5,
     "height": 1,
-    "width2": 2,
+    "width2": 2.5,
     "height2": 1,
     "rotation_angle": 0,
     "rotation_x": 0,
-    "rotation_y": 0.1,
+    "rotation_y": 0.7,
     "labels": [
-      "` escQ",
+      "[  WE",
       null,
-      "P&larr; <i class='mss mss-Unicode-BackSpace-DeleteLeft-Big-2'></i>",
-      "",
+      "IO ]",
+      "( ER",
+      "= HJ",
+      "UI )",
+      "{ WER",
       null,
-      "HJ =",
-      "",
-      null,
-      ";&crarr; ins"
+      "UIO }"
     ],
     "textColor": [
       null,
@@ -451,27 +366,27 @@
     "sb": "",
     "st": "",
     "rect": {
-      "x": 388.8,
-      "y": 51.3,
-      "w": 108,
+      "x": 372.6,
+      "y": 37.8,
+      "w": 135,
       "h": 54,
-      "x2": 496.8,
-      "y2": 105.3
+      "x2": 507.6,
+      "y2": 91.8
     },
     "rect2": {
-      "x": 388.8,
-      "y": 51.3,
-      "w": 108,
+      "x": 372.6,
+      "y": 37.8,
+      "w": 135,
       "h": 54,
-      "x2": 496.8,
-      "y2": 105.3
+      "x2": 507.6,
+      "y2": 91.8
     },
     "bbox": {
-      "x": 388.8,
-      "y": 51.3,
-      "x2": 496.8,
-      "y2": 105.3,
-      "w": 108,
+      "x": 372.6,
+      "y": 37.8,
+      "x2": 507.6,
+      "y2": 91.8,
+      "w": 135,
       "h": 54
     },
     "mat": {
@@ -485,7 +400,7 @@
     "crosshairs": "block",
     "html": {},
     "crosshairs_x": 0,
-    "crosshairs_y": 5.4
+    "crosshairs_y": 37.8
   },
   {
     "x": 11.8,
@@ -508,9 +423,9 @@
       null,
       null,
       null,
-      "8*",
+      "8 *",
       null,
-      "M↑"
+      "ms ↑"
     ],
     "textColor": [
       null,
@@ -612,7 +527,7 @@
       null,
       null,
       null,
-      "7&",
+      "7 &",
       null,
       "wh L"
     ],
@@ -820,9 +735,9 @@
       null,
       null,
       null,
-      "5%",
+      "5 %",
       null,
-      "M↓"
+      "ms ↓"
     ],
     "textColor": [
       null,
@@ -924,9 +839,9 @@
       null,
       null,
       null,
-      "4$",
+      "4 $",
       null,
-      "M←"
+      "ms ←"
     ],
     "textColor": [
       null,
@@ -1132,7 +1047,9 @@
       null,
       ",",
       "",
-      "2@"
+      "2 @",
+      null,
+      "btn 2"
     ],
     "textColor": [
       null,
@@ -1234,7 +1151,9 @@
       null,
       null,
       null,
-      "1!"
+      "1 !",
+      null,
+      "btn 1"
     ],
     "textColor": [
       null,
@@ -1738,7 +1657,7 @@
     "labels": [
       "G",
       null,
-      "⇣",
+      "&theta;⇣",
       null,
       null,
       null,
@@ -1746,7 +1665,7 @@
       null,
       "F10",
       null,
-      "<i class='fa fa-volume-down'></i>"
+      "vol -"
     ],
     "textColor": [
       null,
@@ -2058,7 +1977,7 @@
       null,
       "<i class='mss mss-Unicode-Alternate-3'></i><i class='mss mss-Unicode-Command-3'></i>5",
       null,
-      "<i class='fa fa-volume-off'></i>"
+      "mute"
     ],
     "textColor": [
       null,
@@ -2140,6 +2059,94 @@
     "crosshairs_y": 432
   },
   {
+    "x": 7,
+    "y": 1.2,
+    "x2": 0,
+    "y2": 0,
+    "width": 2.5,
+    "height": 1,
+    "width2": 2.5,
+    "height2": 1,
+    "rotation_angle": 0,
+    "rotation_x": 7,
+    "rotation_y": 0.2,
+    "labels": [
+      "",
+      null,
+      "",
+      "",
+      "",
+      "",
+      "",
+      null,
+      ""
+    ],
+    "textColor": [
+      null,
+      null,
+      "",
+      null,
+      null,
+      null,
+      null,
+      null,
+      "",
+      null,
+      ""
+    ],
+    "textSize": [],
+    "default": {
+      "textColor": "#000000",
+      "textSize": 3
+    },
+    "color": "#cccccc",
+    "profile": "",
+    "nub": false,
+    "ghost": false,
+    "stepped": false,
+    "decal": true,
+    "coloredBorder": true,
+    "sm": "",
+    "sb": "",
+    "st": "",
+    "rect": {
+      "x": 378,
+      "y": 64.8,
+      "w": 135,
+      "h": 54,
+      "x2": 513,
+      "y2": 118.8
+    },
+    "rect2": {
+      "x": 378,
+      "y": 64.8,
+      "w": 135,
+      "h": 54,
+      "x2": 513,
+      "y2": 118.8
+    },
+    "bbox": {
+      "x": 378,
+      "y": 64.8,
+      "x2": 513,
+      "y2": 118.8,
+      "w": 135,
+      "h": 54
+    },
+    "mat": {
+      "a": 1,
+      "b": 0,
+      "c": 0,
+      "d": 1,
+      "e": 0,
+      "f": 0
+    },
+    "crosshairs": "block",
+    "html": {},
+    "crosshairs_x": 378,
+    "crosshairs_y": 10.8
+  },
+  {
     "x": 11.5,
     "y": 3.63,
     "x2": 0,
@@ -2153,23 +2160,29 @@
     "rotation_y": 8,
     "labels": [
       "",
+      "",
+      null,
+      null,
+      "CW",
       null,
       null,
       null,
-      "NUM"
+      null,
+      null,
+      "hyper"
     ],
     "textColor": [
       null,
       null,
       "#009682",
       null,
-      "#0183e6",
+      "",
       null,
       null,
       null,
       "#0183e6",
       null,
-      "#de01e5",
+      "",
       null
     ],
     "textSize": [
@@ -2181,7 +2194,7 @@
       null,
       null,
       null,
-      null,
+      1,
       null,
       null,
       null
@@ -2190,7 +2203,7 @@
       "textColor": "#000000",
       "textSize": 3
     },
-    "color": "#999999",
+    "color": "#bfe93e",
     "profile": "thumb right",
     "nub": false,
     "ghost": false,
@@ -2362,9 +2375,9 @@
       null,
       null,
       null,
-      "6^",
+      "6 ^",
       null,
-      "M→"
+      "ms →"
     ],
     "textColor": [
       null,
@@ -2466,7 +2479,9 @@
       null,
       ".",
       null,
-      "3#"
+      "3 #",
+      null,
+      "btn 3"
     ],
     "textColor": [
       null,
@@ -2568,7 +2583,9 @@
       null,
       null,
       null,
-      "+"
+      "+",
+      null,
+      "acc 0"
     ],
     "textColor": [
       null,
@@ -2675,17 +2692,17 @@
       "pause"
     ],
     "textColor": [
+      "#ffffff",
       null,
-      null,
-      "#009682",
-      null,
-      null,
+      "#00ffdd",
       null,
       null,
       null,
-      "#0183e6",
+      "#ffffff",
       null,
-      "#de01e5",
+      "#4eb2ff",
+      null,
+      "#f55ffd",
       null
     ],
     "textSize": [
@@ -2706,7 +2723,7 @@
       "textColor": "#000000",
       "textSize": 3
     },
-    "color": "#999999",
+    "color": "#666666",
     "profile": "pinky right",
     "nub": false,
     "ghost": false,
@@ -2776,7 +2793,7 @@
       null,
       "*",
       null,
-      "M1"
+      "acc 1"
     ],
     "textColor": [
       null,
@@ -2880,20 +2897,20 @@
       null,
       "_",
       null,
-      "M2"
+      ""
     ],
     "textColor": [
+      "#ffffff",
       null,
-      null,
-      "#009682",
-      null,
-      null,
+      "#00ffdd",
       null,
       null,
       null,
-      "#0183e6",
+      "#ffffff",
       null,
-      "#de01e5",
+      "#4eb2ff",
+      null,
+      "#f55ffd",
       null
     ],
     "textSize": [
@@ -2914,7 +2931,7 @@
       "textColor": "#000000",
       "textSize": 3
     },
-    "color": "#999999",
+    "color": "#666666",
     "profile": "pinky right",
     "nub": false,
     "ghost": false,
@@ -2984,7 +3001,7 @@
       null,
       "\\",
       null,
-      "M3"
+      "acc 2"
     ],
     "textColor": [
       null,
@@ -3088,20 +3105,20 @@
       null,
       "|",
       null,
-      "M4"
+      ""
     ],
     "textColor": [
+      "#ffffff",
       null,
-      null,
-      "#009682",
-      null,
-      null,
+      "#00ffdd",
       null,
       null,
       null,
-      "#0183e6",
+      "#ffffff",
       null,
-      "#de01e5",
+      "#4eb2ff",
+      null,
+      "#f55ffd",
       null
     ],
     "textSize": [
@@ -3122,7 +3139,7 @@
       "textColor": "#000000",
       "textSize": 3
     },
-    "color": "#999999",
+    "color": "#666666",
     "profile": "pinky right",
     "nub": false,
     "ghost": false,
@@ -3480,7 +3497,7 @@
       "",
       null,
       null,
-      "NUM",
+      "NAV",
       null,
       null,
       "",
@@ -3493,7 +3510,7 @@
       null,
       "#009682",
       null,
-      "#0183e6",
+      "",
       null,
       null,
       null,
@@ -3520,7 +3537,7 @@
       "textColor": "#000000",
       "textSize": 3
     },
-    "color": "#999999",
+    "color": "#009682",
     "profile": "thumb left",
     "nub": false,
     "ghost": false,
@@ -3584,14 +3601,14 @@
       null,
       null,
       null,
-      "NAV"
+      "NUM"
     ],
     "textColor": [
       null,
       null,
       "#009682",
       null,
-      "#009682",
+      "",
       null,
       null,
       null,
@@ -3618,7 +3635,7 @@
       "textColor": "#000000",
       "textSize": 3
     },
-    "color": "#999999",
+    "color": "#0183e6",
     "profile": "thumb right",
     "nub": false,
     "ghost": false,
@@ -3776,7 +3793,13 @@
       null,
       null,
       null,
-      "space"
+      "space",
+      null,
+      null,
+      null,
+      null,
+      null,
+      "NAV"
     ],
     "textColor": [
       null,
@@ -3789,7 +3812,7 @@
       null,
       "#0183e6",
       null,
-      "#de01e5",
+      "#009682",
       null
     ],
     "textSize": [
@@ -3874,14 +3897,14 @@
       null,
       null,
       null,
-      "<i class='fa fa-mouse-pointer'></i>"
+      "MAUS"
     ],
     "textColor": [
       null,
       null,
       "#009682",
       null,
-      "#de01e5",
+      "",
       null,
       null,
       null,
@@ -3908,7 +3931,7 @@
       "textColor": "#000000",
       "textSize": 3
     },
-    "color": "#999999",
+    "color": "#de01e5",
     "profile": "thumb right",
     "nub": false,
     "ghost": false,
@@ -3978,20 +4001,20 @@
       null,
       "`~",
       null,
-      "bright"
+      "br +"
     ],
     "textColor": [
-      null,
+      "#ffffff",
       null,
       "#009682",
       null,
       null,
       null,
+      "#ffffff",
       null,
+      "#4eb2ff",
       null,
-      "#0183e6",
-      null,
-      "#de01e5",
+      "#f55ffd",
       null
     ],
     "textSize": [
@@ -4012,7 +4035,7 @@
       "textColor": "#000000",
       "textSize": 3
     },
-    "color": "#999999",
+    "color": "#666666",
     "profile": "pinky left",
     "nub": false,
     "ghost": false,
@@ -4184,20 +4207,20 @@
       null,
       null,
       null,
-      "dim"
+      "br -"
     ],
     "textColor": [
-      null,
+      "#ffffff",
       null,
       "#009682",
       null,
       null,
       null,
+      "#ffffff",
       null,
+      "#4eb2ff",
       null,
-      "#0183e6",
-      null,
-      "#de01e5",
+      "#f55ffd",
       null
     ],
     "textSize": [
@@ -4218,7 +4241,7 @@
       "textColor": "#000000",
       "textSize": 3
     },
-    "color": "#999999",
+    "color": "#666666",
     "profile": "pinky left",
     "nub": false,
     "ghost": false,
@@ -4286,7 +4309,9 @@
       null,
       null,
       null,
-      "F6"
+      "F6",
+      null,
+      ""
     ],
     "textColor": [
       null,
@@ -4380,18 +4405,28 @@
     "rotation_x": 5.25,
     "rotation_y": 7.75,
     "labels": [
-      "⇧"
+      "⇧",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      ""
     ],
     "textColor": [
-      null,
+      "#ffffff",
       null,
       "#009682",
       null,
       null,
       null,
+      "#ffffff",
       null,
-      null,
-      "#0183e6",
+      "#4eb2ff",
       null,
       "#de01e5",
       null
@@ -4414,7 +4449,7 @@
       "textColor": "#000000",
       "textSize": 3
     },
-    "color": "#999999",
+    "color": "#666666",
     "profile": "pinky left",
     "nub": false,
     "ghost": false,
@@ -4482,7 +4517,7 @@
       null,
       "",
       null,
-      "<i class='mss mss-Unicode-Alternate-3'></i><i class='mss mss-Unicode-Command-3'></i>1",
+      "F11",
       null,
       "undo"
     ],
@@ -4792,7 +4827,7 @@
       null,
       null,
       null,
-      "<i class='mss mss-Unicode-Alternate-3'></i><i class='mss mss-Unicode-Command-3'></i>2",
+      "<i F12='mss mss-Unicode-Alternate-3'></i><i class='mss mss-Unicode-Command-3'></i>2",
       null,
       "cut"
     ],
