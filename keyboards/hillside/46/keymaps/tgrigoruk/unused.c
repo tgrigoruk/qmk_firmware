@@ -1,23 +1,5 @@
 
 
-// https://precondition.github.io/home-row-mods
-// Left-hand home row mods
-#define HOME_A LCTL_T(KC_A)
-#define HOME_S LALT_T(KC_S)
-#define HOME_D LGUI_T(KC_D)
-#define HOME_F LSFT_T(KC_F)
-
-// Right-hand home row mods
-#define HOME_J RSFT_T(KC_J)
-#define HOME_K RGUI_T(KC_K)
-#define HOME_L LALT_T(KC_L)
-#define HOME_SCLN RCTL_T(KC_SCLN)
-
-// Layer Toggles
-#define L1(key) LT(_NUM_SYM_FUN, key)
-#define L2(key) LT(_NAV, key)
-#define L3(key) LT(_MOUSE_MEDIA, key)
-
 // Tap Dance declarations, definitions, and aliases
 enum {
     TD_LSFT_CAPSWORD = 0,
@@ -35,3 +17,11 @@ tap_dance_action_t tap_dance_actions[] = {
 
 #define TD_SFT_CW TD(TD_LSFT_CAPSWORD)
 #define TD_NUM_NAV TD(TD_NUM_NAV_LAYERS)
+
+
+    [_NAV] = LAYOUT(
+        xxxxxxxxxx, xxxxxxxxxx, xxxxxxxxxx, xxxxxxxxxx, xxxxxxxxxx, xxxxxxxxxx,                             REDO,       PASTE,      COPY,       CUT,        UNDO,       xxxxxxxxxx,
+        __________, LCTL,       LALT,       LGUI,       LSFT,       xxxxxxxxxx,                             KC_CAPS,    KC_LEFT,    KC_UP,      KC_DOWN,    KC_RGHT,    xxxxxxxxxx,
+        __________, LAG(KC_1),  LAG(KC_2),  LAG(KC_3),  LAG(KC_4),  LAG(KC_5),  xxxxxxxxxx,     xxxxxxxxxx, KC_INS,     KC_HOME,    KC_PGUP,    KC_PGDN,    KC_END,     xxxxxxxxxx,
+                                            __________, __________, __________, xxxxxxxxxx,     KC_ENT,     KC_SPC,     KC_BSPC,    KC_DEL
+        ),

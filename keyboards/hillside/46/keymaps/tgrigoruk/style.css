@@ -1,0 +1,26 @@
+* {
+    font-weight: bold;
+    font-family: "Helvetica Neue";
+}
+
+.keylabel0,
+.keylabel1,
+.keylabel3,
+.keylabel4,
+.keylabel5,
+.keylabel6 {
+    font-size: 14px;
+}
+
+.keylabel10 div {
+    font-size: 8px;
+}
+
+.mouse {
+    font-size: 20px;
+    font-style: normal;
+}
+
+.mouse:after {
+    content: "🐭";
+}

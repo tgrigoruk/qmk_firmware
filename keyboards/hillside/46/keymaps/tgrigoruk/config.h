@@ -14,4 +14,10 @@
 
 #define TAPPING_TERM 200
 
-#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+// #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+
+// https://docs.qmk.fm/features/mouse_keys#kinetic-mode
+#define MK_KINETIC_SPEED
+#define MOUSEKEY_MOVE_DELTA 24  // default 16
+#define MOUSEKEY_INITIAL_SPEED 400  // default 100
+#define MOUSEKEY_BASE_SPEED 3500  // default 5000
